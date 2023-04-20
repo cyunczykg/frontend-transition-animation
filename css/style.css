@@ -1,125 +1,135 @@
-* {box-sizing: border-box;
-margin: 0;padding: 0;}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
-body {font-size: 36px;
-background-color: black;}
+body {
+	font-size: 36px;
+	background-color: black;
+}
 
 .squere {
-    position: absolute;
-     top: 0px;
-    left: 0px; 
-        width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    z-index: -1;
-    /* transition: rotate 2s;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 150px;
+	height: 150px;
+	border-radius: 10px;
+	z-index: -1;
+	/* transition: rotate 2s;
  */
 }
-img
-    {
-        width: 100%;
-        height:100%;
-        z-index: -3;
-        border-radius: 10px;
-    }
+img {
+	width: 100%;
+	height: 100%;
+	z-index: -3;
+	border-radius: 10px;
+}
 
-.frame{
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
+.frame {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.frame:hover .squere {
+	/*rotate: 135deg;
+        transform-origin: 5% 95%;*/
+	animation: hoover-in normal forwards 5s;
+}
+
+.change .frame:not(:hover) .squere {
+	animation: hoover-out normal forwards 0.5s;
+}
+
+@keyframes hoover-in {
+	0% {
+		rotate: 0;
+		transform-origin: 5% 95%;
+	}
+
+	40% {
+		rotate: 155deg;
+		transform-origin: 5% 95%;
+	}
+
+	70% {
+		rotate: 125deg;
+		transform-origin: 5% 95%;
+	}
+
+	100% {
+		rotate: 135deg;
+		transform-origin: 5% 95%;
+	}
+}
+
+@keyframes hoover-out {
+	from {
+		rotate: 135deg;
+		transform-origin: 5% 95%;
+	}
+
+	to {
+		rotate: 0;
+		transform-origin: 5% 95%;
+	}
 }
 
 .one {
-    left: 20%;
+	left: calc(100% / 6 * 1);
 }
 
-.frame:hover .squere    {
-        /*rotate: 135deg;
-        transform-origin: 5% 95%;*/
-        animation: hoover-in normal forwards 5s;
-            }
-
-.frame:not(:hover) .squere{
-                animation: hoover-out normal forwards .5s;
-              }
-
-
-@keyframes hoover-in{
-                from {
-                  rotate:0;
-                  transform-origin: 5% 95%;
-                }
-
-                40% {
-                    rotate: 155deg;
-                    transform-origin: 5% 95%;
-                }
-
-                70% {
-                    rotate: 125deg;
-                    transform-origin: 5% 95%;
-                }
-
-                to {
-                    rotate: 135deg;
-                    transform-origin: 5% 95%;
-                }
-              }
-
-              @keyframes hoover-out{
-                from {
-                  rotate:135deg;
-                  transform-origin: 5% 95%;
-                }
-
-                to {
-                    rotate: 0;
-                    transform-origin: 5% 95%;
-                }
-              }              
-
-
-.two {  
-    left: 40%;
+.two {
+	left: calc(100% / 6 * 2);
 }
 .three {
-    
-    left: 60%;
+	left: calc(100% / 6 * 3);
 }
 .four {
+	left: calc(100% / 6 * 4);
+}
 
-    left: 80%;
+.five {
+	left: calc(100% / 6 * 5);
 }
 
 .yellow {
-    z-index: 0;
-    background-color: yellow;
+	z-index: 0;
+	background-color: yellow;
 }
 
 .green {
-    position: absolute;
-    z-index: 0;
-    background-color: green;
+	position: absolute;
+	z-index: 0;
+	background-color: green;
 }
 .blue {
-    position: absolute;
-    z-index: 0;
-    background-color: blue;
+	position: absolute;
+	z-index: 0;
+	background-color: blue;
 }
 
 .red {
-    position: absolute;
-    z-index: 0;
-    background-color: red;
+	position: absolute;
+	z-index: 0;
+	background-color: red;
+}
+
+.orchid {
+	position: absolute;
+	z-index: 0;
+	background-color: darkorchid;
 }
 
 .dot {
-    position: absolute;
-    z-index: 1;
-    height: 4px;
-    width: 4px;
-    top: 96%;
-    left: 4%;
-    border: solid 1px black;
-    border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	height: 4px;
+	width: 4px;
+	top: 96%;
+	left: 4%;
+	border: solid 1px black;
+	border-radius: 50%;
 }

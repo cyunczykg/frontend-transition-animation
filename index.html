@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Transform</title>
+    <script>
+        function menuOnHoover(squerenumber) {
+            document.getElementById('wrapper' + squerenumber).classList.add('change');
+        }
+    </script>
 </head>
+
 <body>
-    <div class="squere frame one"><img src="./img/duck.jpeg" alt="kaczka">
-        <div class="squere yellow"></div>
-        <div class="dot"></div>
+    <div id="wrapper1" onmouseover="menuOnHoover(1)">
+        <div class="squere frame one"><img src="./img/duck.jpeg" alt="kaczka">
+            <div class="squere yellow"></div>
+            <div class="dot"></div>
+        </div>
     </div>
-    <div class="squere frame two"><img src="./img/dragon.jpg" alt="smok">
-        <div class="squere green"></div>
-        <div class="dot"></div>
+    <div id="wrapper2" onmouseover="menuOnHoover(2)">
+        <div class="squere frame two"><img src="./img/dragon.jpg" alt="smok">
+            <div class="squere green"></div>
+            <div class="dot"></div>
+        </div>
     </div>
-    <div class="squere frame three"><img src="./img/fish.jpg" alt="rybka">
-        <div class="squere blue"></div>
-        <div class="dot"></div>
+
+    <div id="wrapper3" onmouseover="menuOnHoover(3)">
+        <div class="squere frame three"><img src="./img/fish.jpg" alt="rybka">
+            <div class="squere blue"></div>
+            <div class="dot"></div>
+        </div>
     </div>
-    <div class="squere frame four"><img src="./img/abird.jpg" alt="ptak">
-        <div class="squere red"></div>
-        <div class="dot"></div>
+
+    <div id="wrapper4" onmouseover="menuOnHoover(4)">
+        <div class="squere frame four"><img src="./img/abird.jpg" alt="ptak">
+            <div class="squere red"></div>
+            <div class="dot"></div>
+        </div>
     </div>
+
+    <div id="wrapper5" onmouseover="menuOnHoover(5)">
+        <div class="squere frame five"><img src="./img/stich.jpg" alt="stich">
+            <div class="squere orchid"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
 </body>
+
 </html>
